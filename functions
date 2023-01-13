@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Example for functions</title>
+    <script language="Javascript">
+        var a;
+        a = parseInt(window.prompt("Enter a num"));
+
+        function square() {
+            var s;
+            s = a * a;
+            return s;
+        }
+
+        function cube() {
+            var c;
+            c = a * a * a;
+            return c;
+        }
+
+        document.writeln("Square of num is " + square());
+
+        document.writeln("Cube of num is " + cube());
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
