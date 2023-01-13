@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse a set of numbers</title>
+    <script>
+        var enteredNum = prompt("Enter integer");
+
+        function reverseInteger(enteredNum) {
+            const reveredNumber = enteredNum.toString().split('').reverse().join('');
+            return parseInt(reveredNumber) * Math.sign(enteredNum);
+        }
+        alert(reverseInteger(enteredNum));
+
+
+
+        /*let rev = 0;
+        let num = 123;
+        let lastDigit;
+
+        while (num != 0) {
+            lastDigit = num % 10;
+            rev = rev * 10 + lastDigit;
+            num = Math.floor(num / 10);
+        }
+        document.writeln("Reverse number : " + rev);
+
+        /* let number = 12345;
+         let reverse = parseInt(number.toString().split("").reverse().join(""));
+         document.writeln(reverse);*/
+
+        /*function reverseInteger(n) {
+            const reversed = n.toString().split("").reverse().join("");
+            return parseInt(reversed) * Math.sign(n);
+        }*/
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
