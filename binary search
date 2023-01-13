@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>introduction to javascript</title>
+    <script>
+        function binarySearch(array, value) {
+            let high = array.length - 1;
+            let small = 0;
+            let medium = 0;
+            while (small <= high) {
+                medium = Math.floor((high + small) / 2);
+                if (array[medium] == value) {
+                    return array[medium];
+                } else if (value > array[medium]) {
+                    small = medium + 1;
+                } else {
+                    high = medium - 1;
+                }
+
+            }
+            return "Not found";
+        }
+        let array = [10, 20, 30, 40, 60];
+        let sorted = array.sort(function(a, b) {
+            return a - b
+        });
+        //let foundNum = binarySearch(sorted, 45);
+        var foundNum = binarySearch(array, 60);
+        document.writeln(array.indexOf(foundNum));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
